@@ -1,6 +1,27 @@
 .App {
   text-align: center;
 }
+/* prevent horizontal scroll/pan across the whole page */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* make sure layout doesn't expand beyond viewport */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* prevent accidental horizontal panning inside the main area */
+.app-content,
+.main-container {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y; /* allow vertical pan only */
+}
+
 
 .App-logo {
   height: 40vmin;

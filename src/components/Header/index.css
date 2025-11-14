@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  --nav-h: 72px;
+}
+/* adjust this height to your header's real height */
+:root {
+  --header-height: 72px;
+}
+
+/* header styling — ensure it's fixed at top */
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  background: #fff; /* or whatever background you have */
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* main content area — leave space for fixed header */
+.app-content {
+  padding-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
+  box-sizing: border-box;
+}
+
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(252, 253, 254);
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 0 80px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo {
+  height: calc(var(--nav-h) - 24px);
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+.nav-profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  
+  gap: 36px;
+
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+.nav-name-element {
+  margin: 0;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 18px;
+  line-height: 1.2;
+  text-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffd700,
+    0 0 20px #ffd700,
+    0 0 40px #ffd700;
+}
+
+.nav-profile-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.nav-caret {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.nav-profile-image {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid #ffd700;
+  box-shadow:
+    0 0 5px #ffd700,
+    0 0 10px #ffcc00,
+    0 0 20px #ffb700,
+    0 0 30px #fff1b0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  object-fit: cover;
+}
+
+.nav-profile-image:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 10px #ffdf00,
+    0 0 20px #ffd700,
+    0 0 40px #ffb700,
+    0 0 60px #fff3b0;
+}
+
+
+.profile-menu {
+  position: fixed;
+  right: 60px;
+  top: calc(var(--nav-h) + 4px);
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  z-index: 2000;
+
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.profile-menu.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.profile-menu::before {
+  content: "";
+  position: fixed;
+  top: calc(var(--nav-h) - 4px);
+  right: 90px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  transform: rotate(45deg);
+}
+
+
+.profile-menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font: 500 14px/1.2 "Roboto", system-ui, sans-serif;
+  color: #111827;
+  cursor: pointer;
+}
+
+.profile-menu-item:hover,
+.profile-menu-item:focus {
+  background: rgba(102, 16, 242, 0.08);
+  outline: none;
+}
+
+.profile-menu-danger {
+  color: #b91c1c;
+}
+
+.profile-menu-sep {
+  height: 1px;
+  margin: 6px 4px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 1px;
+}
+
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 40px;
+  }
+
+  .nav-profile-container {
+    gap: 24px;
+  }
+
+  .profile-menu {
+    right: 40px;
+    left: 40px;
+  }
+  .nav-name-element{
+    display:none;
+  }
+}
+@media (min-width: 1025px) {
+  .nav-caret { display: none; }
+  .nav-profile-button { cursor: default; }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .nav-profile-container {
+    gap: 16px;
+  }
+
+  .nav-name-element {
+    display: none;
+  }
+
+  .nav-profile-image {
+    height: 40px;
+    width: 40px;
+  }
+
+  .profile-menu {
+    left: 12px;
+    right: 12px;
+  }
+}

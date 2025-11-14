@@ -1,0 +1,104 @@
+/* delete-job.css - responsive, compact delete form */
+
+.dj-root {
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  box-sizing: border-box;
+}
+
+.dj-title {
+  margin: 0 0 12px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dj-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.dj-label {
+  font-size: 13px;
+  color: #374151;
+  font-weight: 600;
+}
+
+.dj-input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6eef7;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+.dj-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 8px 30px rgba(37,99,235,0.06);
+}
+
+.dj-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.dj-delete {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#ef4444,#dc2626);
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dj-delete[disabled],
+.dj-delete[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.dj-clear {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #e6eef7;
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* messages */
+.dj-message {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 14px;
+  border: 1px solid rgba(15,23,42,0.04);
+}
+.dj-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid rgba(6,95,70,0.08);
+}
+.dj-error {
+  background: #fff7f7;
+  color: #7f1d1d;
+  border: 1px solid rgba(239,68,68,0.10);
+}
+
+/* responsive */
+@media (max-width: 640px) {
+  .dj-actions { flex-direction: column; align-items: stretch; }
+  .dj-delete, .dj-clear { width: 100%; }
+}

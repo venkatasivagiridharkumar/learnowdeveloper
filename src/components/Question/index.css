@@ -1,0 +1,115 @@
+/* questions-list.css - full-width rows, responsive */
+
+.ql-root {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 18px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color: #0f172a;
+  box-sizing: border-box;
+}
+
+.ql-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.ql-title { margin: 0; font-size: 20px; font-weight: 700; }
+.ql-sub { margin: 0; color: #6b7280; font-size: 14px; }
+
+.ql-state {
+  padding: 18px;
+  border-radius: 10px;
+  background: #fff;
+  color: #6b7280;
+  box-shadow: 0 6px 20px rgba(2,6,23,0.03);
+}
+.ql-error { color: #b91c1c; background: #fff7f7; border: 1px solid rgba(239,68,68,0.08); }
+
+.ql-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Row */
+.ql-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(2,6,23,0.04);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+.ql-row:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(2,6,23,0.06);
+}
+
+/* left column */
+.ql-left {
+  width: 64px;
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ql-id {
+  background: #f3f4f6;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* main column */
+.ql-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ql-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ql-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.ql-difficulty {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.ql-difficulty.ql-easy { background: #d1fae5; color: #065f46; }
+.ql-difficulty.ql-medium { background: #fef3c7; color: #92400e; }
+.ql-difficulty.ql-hard { background: #fee2e2; color: #7f1d1d; }
+.ql-difficulty.ql-unknown { background: #eef2ff; color: #3730a3; }
+
+.ql-meta { margin: 0; color: #374151; font-size: 14px; }
+.ql-link { color: #2563eb; font-weight: 600; text-decoration: none; }
+.ql-link:hover { text-decoration: underline; }
+
+/* additional / leftover fields */
+.ql-details { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+.ql-detail { background: #f8fafc; padding: 6px 8px; border-radius: 8px; font-size: 13px; color: #374151; }
+.ql-detail-key { font-weight: 700; color: #111827; margin-right: 6px; }
+.ql-detail-val { color: #374151; }
+
+/* responsive */
+@media (max-width: 880px) {
+  .ql-row { flex-direction: column; align-items: stretch; }
+  .ql-left { width: 100%; display: flex; justify-content: flex-start; }
+  .ql-id { padding: 6px 8px; }
+  .ql-top { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .ql-details { justify-content: flex-start; }
+}

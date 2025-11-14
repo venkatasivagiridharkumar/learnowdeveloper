@@ -1,0 +1,120 @@
+/* src/components/add-question.css - responsive, compact form */
+
+.aq-root {
+  max-width: 760px;
+  margin: 20px auto;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.06);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  box-sizing: border-box;
+}
+
+.aq-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.aq-form {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 10px 12px;
+}
+
+/* full-row labels */
+.aq-label {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 6px;
+}
+
+/* inputs */
+.aq-input {
+  grid-column: 1 / -1;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6eef7;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+.aq-select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6eef7;
+  font-size: 14px;
+  background: #fff;
+}
+
+/* place select in second column on wide screens */
+@media (min-width: 680px) {
+  #q-difficulty { grid-column: 2 / 3; }
+}
+
+/* errors */
+.aq-field-error {
+  grid-column: 1 / -1;
+  color: #b91c1c;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.aq-server-error {
+  grid-column: 1 / -1;
+  background: #fff1f2;
+  color: #7f1d1d;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #fecaca;
+  margin-bottom: 6px;
+}
+
+.aq-invalid {
+  border-color: #fca5a5 !important;
+}
+
+/* actions */
+.aq-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.aq-submit {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: linear-gradient(180deg,#2563eb,#0b5ed7);
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.aq-submit[disabled],
+.aq-submit[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.aq-reset {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e6eef7;
+  background: transparent;
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* responsive: single column */
+@media (max-width: 680px) {
+  .aq-form { grid-template-columns: 1fr; }
+  .aq-select { grid-column: 1 / -1; }
+}

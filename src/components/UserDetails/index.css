@@ -1,0 +1,59 @@
+.ud-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.ud-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.ud-status {
+  text-align: center;
+  color: #555;
+}
+
+.ud-error {
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+
+.ud-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each row (card) */
+.ud-card {
+  display: flex;
+  gap: 14px;
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Photo */
+.ud-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Info */
+.ud-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+.ud-info p { margin: 0; }

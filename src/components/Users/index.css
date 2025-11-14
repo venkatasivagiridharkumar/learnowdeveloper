@@ -1,0 +1,93 @@
+/* Page container */
+.users-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.users-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* List layout */
+.users-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Thin + Compact list item */
+.user-item {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px 14px;       /* ↓ reduced padding */
+  margin-bottom: 10px;      /* ↓ smaller gap */
+
+  display: flex;
+  align-items: center;      /* aligns avatar + text nice */
+  gap: 12px;                /* ↓ smaller gap */
+
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+.user-item:hover {
+  background: #f3f6ff;
+  box-shadow: 0px 3px 8px rgba(0,0,0,0.12);
+}
+
+/* Smaller Avatar */
+.user-avatar {
+  width: 45px;              /* ↓ smaller */
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #ccc;   /* lighter border */
+  object-fit: cover;
+}
+
+/* User Right Section */
+.user-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;                 /* ↓ tight spacing */
+  width: 100%;
+}
+
+/* Text styles */
+.user-name {
+  font-size: 16px;          /* ↓ smaller */
+  color: #222;
+  font-weight: bold;
+  margin: 0;
+}
+
+.user-mentor,
+.user-password {
+  font-size: 13px;          /* ↓ smaller */
+  color: #555;
+  margin: 0;               /* removes extra space */
+}
+
+.user-mentor span,
+.user-password span {
+  font-weight: bold;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .user-item {
+    flex-direction: row;  /* still row layout on mobile */
+    text-align: left;
+  }
+
+  .user-right {
+    align-items: flex-start;
+  }
+}
