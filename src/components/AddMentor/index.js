@@ -1,7 +1,7 @@
 import React, { useState} from "react";
 import "./index.css";
 
-const API_URL = "https://learnowbackend2.onrender.com/add-mentor";
+const API_URL = "https://learnowback.onrender.com/add-mentor";
 
 const isValidUrl = (v) => {
   try {

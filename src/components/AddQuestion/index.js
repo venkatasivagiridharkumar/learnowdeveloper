@@ -1,8 +1,8 @@
-// src/components/AddQuestion.jsx
+
 import React, { useState, useMemo } from "react";
 import "./index.css";
 
-const API_URL = "https://learnowbackend2.onrender.com/add-coding-question";
+const API_URL = "https://learnowback.onrender.com/add-coding-question";
 
 const isValidHttpUrl = (value) => {
   try {

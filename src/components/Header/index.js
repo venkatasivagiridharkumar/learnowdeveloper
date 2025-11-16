@@ -76,7 +76,9 @@ const Header = () => {
           <Link to="/jobs" className="profile-menu-item">Jobs</Link>
           <Link to="/add-job" className="profile-menu-item">Add Jobs</Link>
           <Link to="/delete-job" className="profile-menu-item">Delete Jobs</Link>
-          
+          <Link to="/announcements" className="profile-menu-item">Announcements</Link>
+          <Link to="/add-announcements" className="profile-menu-item">Add Announcements</Link>
+          <Link to="/delete-announcements" className="profile-menu-item">Delete Announcements</Link>
         </div>
       </div>
     </nav>

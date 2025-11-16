@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import "./index.css";
 
-const API_URL = "https://learnowbackend2.onrender.com/add-jobs";
+const API_URL = "https://learnowback.onrender.com/add-jobs";
 
 const AddJob = () => {
   const [form, setForm] = useState({
@@ -20,7 +20,7 @@ const AddJob = () => {
   const [serverError, setServerError] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  // VALIDATION
+  
   const validate = (v) => {
     const e = {};
     Object.entries(v).forEach(([k, val]) => {

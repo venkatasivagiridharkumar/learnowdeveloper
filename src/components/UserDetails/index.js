@@ -11,7 +11,7 @@ const UserDetails = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    const url = "https://learnowbackend2.onrender.com/user-details";
+    const url = "https://learnowback.onrender.com/user-details";
 
     const load = async () => {
       try {

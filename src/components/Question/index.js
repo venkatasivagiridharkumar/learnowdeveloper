@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
 
-const API_URL = "https://learnowbackend2.onrender.com/coding-questions";
+const API_URL = "https://learnowback.onrender.com/coding-questions";
 
 const Question = () => {
   const [questions, setQuestions] = useState([]);
@@ -66,7 +66,6 @@ const Question = () => {
                   </a>
                 </p>
 
-                {/* Show any additional fields if present */}
                 <div className="ql-details">
                   {Object.entries(q).map(([key, value]) => {
                     if (["id", "name", "difficulty", "link"].includes(key)) return null;

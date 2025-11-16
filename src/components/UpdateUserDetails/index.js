@@ -122,7 +122,7 @@ const UpdateUserDetails = () => {
         expertise: trimmed.expertise,
       };
 
-      const res = await fetch("https://learnowbackend2.onrender.com/update-user-details", {
+      const res = await fetch("https://learnowback.onrender.com/update-user-details", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

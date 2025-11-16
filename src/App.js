@@ -14,6 +14,9 @@ import Jobs from "./components/Jobs";
 import AddJob from "./components/AddJob";
 import DeleteJob from "./components/DeleteJob";
 import NotFound from "./components/NotFound";
+import Announcements from "./components/Announcements";
+import AddAnnouncements from "./components/AddAnnouncements";
+import DeleteAnnouncement from "./components/DeleteAnnouncements";
 function App() {
   return (
    <>
@@ -31,6 +34,10 @@ function App() {
       <Route path="/jobs" element={<Jobs/>}/>
       <Route path="/add-job" element={<AddJob/>}/>
       <Route path="/delete-job" element={<DeleteJob/>}/>
+      <Route path="/announcements" element={<Announcements/>}/>
+      <Route path="/add-announcements" element={<AddAnnouncements/>}/>
+      <Route path="/delete-announcements" element={<DeleteAnnouncement/>}/>
+      
       <Route path="*" element={<NotFound/>}/>
     </Routes>
     </main>

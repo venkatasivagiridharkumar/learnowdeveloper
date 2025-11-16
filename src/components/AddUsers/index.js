@@ -66,22 +66,16 @@ const AddUsers = () => {
         "mentor-username": trimmedData.mentorUsername,
       };
 
-      const res = await fetch("https://learnowbackend2.onrender.com/add-users", {
+      const res = await fetch("https://learnowback.onrender.com/add-users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
-      // try to get JSON message (if backend returns JSON)
       let resJson = null;
-      try {
         resJson = await res.json();
-      } catch (err) {
-        // ignore JSON parse errors
-      }
-
+     
       if (!res.ok) {
-        // If backend provides message, show it; otherwise generic.
         const message =
           (resJson && (resJson.message || resJson.error)) ||
           `Server responded with status ${res.status}`;
@@ -89,7 +83,6 @@ const AddUsers = () => {
         alert("Error: " + message);
       } else {
         alert("User added successfully!");
-        // optional: reset form
         setFormData({ username: "", password: "", mentorUsername: "" });
       }
     } catch (error) {

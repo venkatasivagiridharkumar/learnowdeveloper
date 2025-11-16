@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import "./index.css";
 
-const API_URL = "https://learnowbackend2.onrender.com/mentors-details";
+const API_URL = "https://learnowback.onrender.com/mentors-details";
 
 const formatDate = (iso) => {
   if (!iso) return "";

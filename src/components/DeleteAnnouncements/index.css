@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: #f3f4f6;
+}
+
+/* Page wrapper */
+.delete-announcement-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Card container */
+.delete-announcement-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Heading & subtitle */
+.delete-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  text-align: center;
+}
+
+.delete-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Form styling */
+.delete-form .form-label {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.delete-form .form-control {
+  padding: 0.6rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.delete-form .form-control:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 0.15rem rgba(239, 68, 68, 0.15);
+}
+
+/* Button */
+.btn-danger {
+  border-radius: 999px;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+}
+
+/* Status messages */
+.status-message {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.status-message.success {
+  color: #15803d;
+}
+
+.status-message.error {
+  color: #b91c1c;
+}
+
+/* Small screens */
+@media (max-width: 576px) {
+  .delete-announcement-card {
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
+  }
+
+  .delete-title {
+    font-size: 1.3rem;
+  }
+}
