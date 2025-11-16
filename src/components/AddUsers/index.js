@@ -60,10 +60,10 @@ const AddUsers = () => {
     setErrors({});
 
     try {
-      const payload = {
+          const payload = {
         username: trimmedData.username,
         password: trimmedData.password,
-        "mentor-username": trimmedData.mentorUsername,
+        mentor_username: trimmedData.mentorUsername,
       };
 
       const res = await fetch("https://learnowback.onrender.com/add-users", {
