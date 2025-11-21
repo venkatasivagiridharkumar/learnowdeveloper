@@ -23,7 +23,7 @@ const DeleteAnnouncement = () => {
       setMessage("");
 
       const response = await fetch(
-        `https://learnowbackmongo.onrender.com/delete-announcements/${id}`,
+        `https://learnow-backmongo-production.up.railway.app/delete-announcements/${id}`,
         {
           method: "DELETE",
           headers: {

@@ -46,7 +46,7 @@ const AddAnnouncement = () => {
     try {
       setLoading(true);
 
-      const response = await fetch("https://learnowbackmongo.onrender.com/add-announcements", {
+      const response = await fetch("https://learnow-backmongo-production.up.railway.app/add-announcements", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

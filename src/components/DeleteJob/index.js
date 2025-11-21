@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 
-const API_BASE = "https://learnowbackmongo.onrender.com/delete-jobs";
+const API_BASE = "https://learnow-backmongo-production.up.railway.app/delete-jobs";
 
 const DeleteJob = () => {
   const [jobId, setJobId] = useState("");

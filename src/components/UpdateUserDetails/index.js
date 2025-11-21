@@ -122,24 +122,21 @@ const UpdateUserDetails = () => {
         expertise: trimmed.expertise,
       };
 
-      const res = await fetch("https://learnowbackmongo.onrender.com/update-user-details", {
+      const res = await fetch("https://learnow-backmongo-production.up.railway.app/update-user-details", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
 
-      // Try to parse JSON (if backend responds with JSON)
       let resJson = null;
       try {
         resJson = await res.json();
       } catch (err) {
-        // ignore parse error
+       
       }
 
       if (!res.ok) {
-        // If backend returns structured errors, map them to fields where possible
         if (resJson) {
-          // if backend returns { errors: { field: 'msg' } } or { message: '...' }
           if (resJson.errors && typeof resJson.errors === "object") {
             setErrors(resJson.errors);
             setFormError(resJson.message || "Validation failed on server.");
@@ -152,10 +149,9 @@ const UpdateUserDetails = () => {
           setFormError(`Server error: ${res.status}`);
         }
       } else {
-        // Success
+       
         const successMsg = (resJson && (resJson.message || "Updated successfully.")) || "Updated successfully.";
-        // You can choose to keep the form populated or reset it — we'll keep populated.
-        alert(successMsg);
+       alert(successMsg);
       }
     } catch (err) {
       console.error("Network error:", err);
