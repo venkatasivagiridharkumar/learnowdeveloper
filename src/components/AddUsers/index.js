@@ -66,7 +66,7 @@ const AddUsers = () => {
         mentor_username: trimmedData.mentorUsername,
       };
 
-      const res = await fetch("https://learnowback.onrender.com/add-users", {
+      const res = await fetch("https://learnowbackmongo.onrender.com/add-users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

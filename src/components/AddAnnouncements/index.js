@@ -46,7 +46,7 @@ const AddAnnouncement = () => {
     try {
       setLoading(true);
 
-      const response = await fetch("https://learnowback.onrender.com/add-announcements", {
+      const response = await fetch("https://learnowbackmongo.onrender.com/add-announcements", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -12,7 +12,7 @@ const Announcements = () => {
       setLoading(true);
       setError("");
 
-      const response = await fetch("https://learnowback.onrender.com/announcements");
+      const response = await fetch("https://learnowbackmongo.onrender.com/announcements");
 
       if (!response.ok) {
         throw new Error("Failed to fetch announcements");

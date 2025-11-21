@@ -5,7 +5,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("https://learnowback.onrender.com/users")
+    fetch("https://learnowbackmongo.onrender.com/users")
       .then((res) => res.json())
       .then((data) => setUsers(data || []))
       .catch((err) => console.error(err));

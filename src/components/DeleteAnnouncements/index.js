@@ -23,7 +23,7 @@ const DeleteAnnouncement = () => {
       setMessage("");
 
       const response = await fetch(
-        `https://learnowback.onrender.com/delete-announcements/${id}`,
+        `https://learnowbackmongo.onrender.com/delete-announcements/${id}`,
         {
           method: "DELETE",
           headers: {

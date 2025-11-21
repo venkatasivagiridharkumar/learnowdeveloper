@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import "./index.css";
 
-const API_URL = "https://learnowback.onrender.com/add-jobs";
+const API_URL = "https://learnowbackmongo.onrender.com/add-jobs";
 
 const AddJob = () => {
   const [form, setForm] = useState({
