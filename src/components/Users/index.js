@@ -11,6 +11,8 @@ const Users = () => {
       .catch((err) => console.error(err));
   }, []);
 
+
+
   return (
     <div className="users-container">
       <h1 className="users-title">Users</h1>
@@ -32,7 +34,7 @@ const Users = () => {
             <div className="user-right">
               <p className="user-name">{u.username}</p>
               <p className="user-mentor">
-                Mentor: <span>{u.mentor_username || "None"}</span>
+                Mentor: <span>{u.mentor_username || "Nones"}</span>
               </p>
               <p className="user-password">
                 Password: <span>{u.password || "N/A"}</span>
