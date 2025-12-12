@@ -122,7 +122,7 @@ const UpdateUserDetails = () => {
         expertise: trimmed.expertise,
       };
 
-      const res = await fetch("https://learnow-backmongo-production.up.railway.app/update-user-details", {
+      const res = await fetch("https://learnowbackmongo.onrender.com/update-user-details", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

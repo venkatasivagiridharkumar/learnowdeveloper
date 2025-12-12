@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./index.css";
 
-const API_BASE = "https://learnow-backmongo-production.up.railway.app/delete-jobs";
+const API_BASE = "https://learnowbackmongo.onrender.com/delete-jobs";
 
 const DeleteJob = () => {
   const [jobId, setJobId] = useState("");
   const [submitting, setSubmitting] = useState(false);
-  const [message, setMessage] = useState(null); // { type: 'success'|'error'|'info', text: string }
+  const [message, setMessage] = useState(null);
 
   const clearMsg = () => setMessage(null);
 

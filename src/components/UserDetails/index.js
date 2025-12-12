@@ -11,7 +11,7 @@ const UserDetails = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-    const url = "https://learnow-backmongo-production.up.railway.app/user-details";
+    const url = "https://learnowbackmongo.onrender.com/user-details";
 
     const load = async () => {
       try {

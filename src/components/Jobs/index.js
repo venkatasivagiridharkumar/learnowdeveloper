@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useMemo } from "react";
 import "./index.css";
 
-const API_URL = "https://learnow-backmongo-production.up.railway.app/jobs";
+const API_URL = "https://learnowbackmongo.onrender.com/jobs";
 
 const Jobs = () => {
   const [jobs, setJobs] = useState([]);

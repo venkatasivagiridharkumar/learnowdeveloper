@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from "react";
 import "./index.css";
 
-const API_URL = "https://learnow-backmongo-production.up.railway.app/add-coding-question";
+const API_URL = "https://learnowbackmongo.onrender.com/add-coding-question";
 
 const isValidHttpUrl = (value) => {
   try {
