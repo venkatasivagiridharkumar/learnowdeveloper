@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
-https:"//learnowbackmongo.onrender.com/coding-questions";
+const API_URL="https://learnowbackmongo.onrender.com/coding-questions";
 
 const Question = () => {
   const [questions, setQuestions] = useState([]);
